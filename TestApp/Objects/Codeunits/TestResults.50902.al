@@ -1,5 +1,5 @@
 // Held in memory rather than in a table because the runner's isolation rolls back what the tests write.
-codeunit 89002 "BAAN Test Results"
+codeunit 50902 "BAAN Test Results"
 {
     SingleInstance = true;
     Access = Internal;

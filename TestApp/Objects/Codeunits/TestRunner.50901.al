@@ -1,4 +1,4 @@
-codeunit 89001 "BAAN Test Runner"
+codeunit 50901 "BAAN Test Runner"
 {
     Subtype = TestRunner;
     TestIsolation = Codeunit;

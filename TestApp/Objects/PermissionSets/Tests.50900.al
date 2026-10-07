@@ -1,4 +1,4 @@
-permissionset 89000 "BAAN Tests"
+permissionset 50900 "BAAN Tests"
 {
     Caption = 'Item Line Posting Tests';
     Assignable = true;

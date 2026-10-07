@@ -1,6 +1,6 @@
 // The company has no items, so the fixture builds its own customer and items from whichever
 // existing customer has a usable General Posting Setup. The runner's isolation rolls all of it back.
-codeunit 89000 "BAAN Item Line Split Test"
+codeunit 50900 "BAAN Item Line Split Test"
 {
     Subtype = Test;
     TestPermissions = Disabled;
@@ -96,7 +96,8 @@ codeunit 89000 "BAAN Item Line Split Test"
 
     local procedure Initialize()
     begin
-        if IsInitialized then
+        // A failing test rolls back the fixture it built, so the flag alone is not enough.
+        if IsInitialized and Customer.Find() then
             exit;
 
         RelaxSetup();
@@ -115,6 +116,7 @@ codeunit 89000 "BAAN Item Line Split Test"
         SalesSetup: Record "Sales & Receivables Setup";
         GLSetup: Record "General Ledger Setup";
         UserSetup: Record "User Setup";
+        Workflow: Record Workflow;
     begin
         SalesSetup.Get();
         SalesSetup."Copy Line Descr. to G/L Entry" := false;
@@ -128,11 +130,18 @@ codeunit 89000 "BAAN Item Line Split Test"
         GLSetup."Allow Posting To" := 0D;
         GLSetup.Modify();
 
-        if UserSetup.Get(UserId()) then begin
-            UserSetup."Allow Posting From" := 0D;
-            UserSetup."Allow Posting To" := 0D;
-            UserSetup.Modify();
+        if not UserSetup.Get(UserId()) then begin
+            UserSetup.Init();
+            UserSetup."User ID" := CopyStr(UserId(), 1, MaxStrLen(UserSetup."User ID"));
+            UserSetup.Insert();
         end;
+        UserSetup."Allow Posting From" := 0D;
+        UserSetup."Allow Posting To" := 0D;
+        UserSetup.Modify();
+
+        // ModifyAll skips the trigger that refuses to edit an enabled workflow.
+        Workflow.SetRange(Enabled, true);
+        Workflow.ModifyAll(Enabled, false);
     end;
 
     local procedure CreateCustomer()
@@ -320,6 +329,8 @@ codeunit 89000 "BAAN Item Line Split Test"
         SalesHeader.Validate("Sell-to Customer No.", Customer."No.");
         SalesHeader.Validate("Posting Date", WorkDate());
         SalesHeader.Validate("External Document No.", 'BAAN');
+        // Bond's Field Additions and Custom Reports refuses to post a sales document without one.
+        SalesHeader.Validate("Assigned User ID", CopyStr(UserId(), 1, MaxStrLen(SalesHeader."Assigned User ID")));
         SalesHeader.Modify(true);
     end;
 

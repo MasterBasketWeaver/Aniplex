@@ -1,4 +1,4 @@
-pageextension 80000 "BAAN General Ledger Entries" extends "General Ledger Entries"
+pageextension 50200 "BAAN General Ledger Entries" extends "General Ledger Entries"
 {
     layout
     {

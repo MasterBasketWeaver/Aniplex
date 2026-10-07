@@ -1,4 +1,4 @@
-table 89000 "BAAN Test Run"
+table 50900 "BAAN Test Run"
 {
     Caption = 'Item Line Posting Test Run';
     DataClassification = SystemMetadata;

@@ -3,3 +3,4 @@ BryanA BC Developments Inc. (c) 2026
 10.06.26 BA  v28.0.1.0 - Initial version: each Item line on a posted sales invoice or credit memo gets its own
                         G/L entry (via the Invoice Posting Buffer's Additional Grouping Identifier)
                         - Item Line Description on G/L entries, filled from the sales line description
+10.07.26 BA  v28.0.1.1 - Object IDs moved to 50200..50299: codeunit 80000 clashed with Copy Company Setup

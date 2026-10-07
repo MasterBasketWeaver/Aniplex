@@ -1,4 +1,4 @@
-codeunit 80000 "BAAN Sales Post Subscribers"
+codeunit 50200 "BAAN Sales Post Subscribers"
 {
     Access = Internal;
 
