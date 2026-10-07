@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            //https://businesscentral.dynamics.com/48071014-a035-4939-9238-847bf8139085/Dev
+            "type": "al",
+            "request": "launch",
+            "name": "Dev",
+            "tenant": "48071014-a035-4939-9238-847bf8139085",
+            "environmentType": "Sandbox",
+            "environmentName": "Dev",
+            "breakOnError": true,
+            "launchBrowser": false,
+            "schemaUpdateMode": "Synchronize"
+        }
+    ]
+}

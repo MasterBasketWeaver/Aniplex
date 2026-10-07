@@ -1,0 +1,5 @@
+In-Sys Solutions, Inc. (c) 2026
+
+10.06.26 BA  v28.0.1.0 - Initial version: invoice, credit memo and G/L Account line posting tests for
+                        In-Sys Andy Frain Item Line Posting, run under codeunit isolation through the
+                        testRuns API (insys/itemLinePostingTest/v1.0)

@@ -1,0 +1,34 @@
+{
+  "id": "d8f8cbc8-509f-4873-99cd-4fd41d56bec3",
+  "name": "In-Sys Andy Frain Item Line Posting Tests",
+  "publisher": "In-Sys Solutions, Inc.",
+  "version": "28.0.1.0",
+  "platform": "28.0.0.0",
+  "application": "28.0.0.0",
+  "runtime": "16.0",
+  "brief": "Posts test sales documents to check that Item lines get their own G/L entries.",
+  "description": "Test codeunits for In-Sys Andy Frain Item Line Posting. The tests run under a test runner with codeunit isolation, so every record they create or post is rolled back. Run them through the testRuns API (insys/itemLinePostingTest/v1.0) and its run action.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "92426305-de8f-46a4-8511-f553dc05d3f1",
+      "name": "In-Sys Andy Frain Item Line Posting",
+      "publisher": "In-Sys Solutions, Inc.",
+      "version": "28.0.1.0"
+    }
+  ],
+  "screenshots": [],
+  "idRanges": [
+    {
+      "from": 50170,
+      "to": 50189
+    }
+  ],
+  "features": [
+    "NoImplicitWith"
+  ]
+}

@@ -1,0 +1,13 @@
+.alcache
+.altemplates
+.alpackages
+.snapshots
+*.snapshots
+output/
+*.app
+**/rad.json
+
+bc_credentials
+bc_token_cache.bin
+bc_token.json
+__pycache__/
