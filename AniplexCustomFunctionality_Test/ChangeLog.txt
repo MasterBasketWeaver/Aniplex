@@ -1,0 +1,5 @@
+BryanA BC Developments Inc. (c) 2026
+
+10.06.26 BA  v28.0.1.0 - Initial version: invoice, credit memo and G/L Account line posting tests for
+                        Aniplex Custom Functionality, run under codeunit isolation through the
+                        testRuns API (bryana/itemLinePostingTest/v1.0)

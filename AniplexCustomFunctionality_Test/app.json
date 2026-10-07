@@ -1,0 +1,40 @@
+{
+  "id": "cb8c7961-c10a-4df4-86da-b703c579213f",
+  "name": "Aniplex Custom Functionality Tests",
+  "publisher": "BryanA BC Developments Inc.",
+  "version": "28.0.1.0",
+  "platform": "28.0.0.0",
+  "application": "28.0.0.0",
+  "runtime": "16.0",
+  "brief": "Posts test sales documents to check that Item lines get their own G/L entries.",
+  "description": "Test codeunits for Aniplex Custom Functionality. The tests run under a test runner with codeunit isolation, so every record they create or post is rolled back. Run them through the testRuns API (bryana/itemLinePostingTest/v1.0) and its run action.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "9b7b0048-e102-444e-8de6-f26c82f3c4b9",
+      "name": "Aniplex Custom Functionality",
+      "publisher": "BryanA BC Developments Inc.",
+      "version": "28.0.1.0"
+    }
+  ],
+  "screenshots": [],
+  "idRanges": [
+    {
+      "from": 89000,
+      "to": 89999
+    }
+  ],
+  "features": [
+    "NoImplicitWith"
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": false,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false,
+    "applyToDevExtension": false
+  }
+}
